@@ -1,3 +1,4 @@
+// ignore: duplicate_ignore
 // ignore: file_names
 // ignore_for_file: avoid_types_as_parameter_names, non_constant_identifier_names, file_names
 

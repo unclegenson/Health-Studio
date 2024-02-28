@@ -403,7 +403,7 @@ consistantly working on improving her skills.''',
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsets.all(8),
+                                padding: const EdgeInsets.all(8),
                                 child: Container(
                                   height: 25,
                                   width: 50,

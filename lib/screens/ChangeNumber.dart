@@ -203,8 +203,6 @@ class _BodyState extends State<Body> {
                               ProfilePage(dropdownValue, number, email),
                         ));
                   });
-                  print(lastvalue);
-                  print(number);
                   setState(() {
                     lastvalue = number;
                   });
