@@ -1,0 +1,145 @@
+name: app23
+description: A new Flutter project.
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.19.6 <3.0.0"
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  file_picker: ^5.3.1
+  flutter:
+    sdk: flutter
+  image_picker: ^1.0.2
+  open_file: ^3.3.2
+  smooth_page_indicator: ^1.1.0
+
+  url_launcher: ^6.1.11
+  country_code_picker: ^3.0.0
+  intl_phone_field: ^3.2.0
+
+  flutter_email_sender: ^6.0.1
+  story: ^1.1.0
+  advstory: ^0.2.1
+
+  circular_chart_flutter: ^0.0.2
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+
+dev_dependencies:
+  flutter_lints: ^2.0.2
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/images/img4_prev_ui.png
+    - assets/images/img8.jpg
+    - assets/images/google_icon.png
+    - assets/images/photo_girl_.png
+    - assets/images/photo_girl.jpg
+    - assets/images/img6.jpg
+    - assets/images/trans_img_doctor.png
+    - assets/images/baby2.png
+    - assets/images/bone2.jpg
+    - assets/images/brain.jpg
+    - assets/images/eye.png
+    - assets/images/hearth.jpg
+    - assets/images/stomach.jpg
+    - assets/images/tooth.jpg
+    - assets/images/woman.jpg
+    - assets/images/dentist1.jpg
+    - assets/images/dentist2.png
+    - assets/images/dentist3.jpeg
+    - assets/images/dentist4.jpg
+    - assets/images/dentist5.jpg
+    - assets/images/dentist6.jpg
+    - assets/images/dentist7.jpg
+    - assets/images/dentist8.jfif
+    - assets/images/male_doctor.webp
+    - assets/images/man.png
+    - assets/images/man2.jfif
+    - assets/images/girl.jpg
+    - assets/images/man3.jfif
+    - assets/images/girl3.jpg
+    - assets/images/img2.jpg
+    - assets/images/water2.webp
+    - assets/images/walking.jpg
+    - assets/images/sleep.jpg
+    - assets/images/sun.jpg
+    - assets/images/apple.jpg
+    - assets/images/meditate.jpg
+    - assets/images/badsleep.jpeg
+    - assets/images/stress.jpg
+    - assets/images/stuck.webp
+    - assets/images/headache.jpg
+    - assets/images/focus.jpg
+    - assets/images/dr1.jpg
+    - assets/images/dr2.jpg
+    - assets/images/dr3.webp
+    - assets/images/dr4.jpg
+    - assets/images/dr5.jpg
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  fonts:
+    - family: google
+      fonts:
+        - asset: assets/Fonts/Pacifico-Regular.ttf
+    #       - asset: fonts/Schyler-Italic.ttf
+    #         style: italic
+    - family: google2
+      fonts:
+        - asset: assets/Fonts/DancingScript.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
