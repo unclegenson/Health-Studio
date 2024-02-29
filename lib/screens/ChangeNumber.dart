@@ -6,8 +6,10 @@ import 'package:app23/screens/ChangeLanguage.dart';
 import 'package:app23/screens/changeEmail.dart';
 import 'package:flutter/material.dart';
 import 'ProfilePage.dart';
+import 'RoutePage.dart';
+import 'info.dart';
 
-String number = '0910 063 9128';
+String number = '0930 969 7796';
 
 class ChangeNumber extends StatefulWidget {
   static String routeName = '/changeprofile';
@@ -87,7 +89,7 @@ class Body extends StatefulWidget {
   State<Body> createState() => _BodyState();
 }
 
-String lastvalue = '0910 063 9128';
+String lastvalue = '0930 969 7796';
 
 class _BodyState extends State<Body> {
   @override
@@ -197,14 +199,20 @@ class _BodyState extends State<Body> {
                   ScaffoldMessenger.of(context).showSnackBar(widget.snackBar);
                   Timer(const Duration(seconds: 2), () {
                     Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) =>
-                              ProfilePage(dropdownValue, number, email),
-                        ));
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => RoutePage(
+                          pageIndex: 3,
+                          dropdownValue: info().dropdownValue,
+                          email: info().email,
+                          number: info().number,
+                        ),
+                      ),
+                    );
                   });
                   setState(() {
                     lastvalue = number;
+                    info().number = number;
                   });
                 } else {
                   ScaffoldMessenger.of(context).showSnackBar(widget.snackBar2);

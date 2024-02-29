@@ -27,7 +27,7 @@ class _DonePageState extends State<DonePage> {
     });
     Future.delayed(const Duration(seconds: 5), () {
       setState(() {
-        Navigator.pushNamed(context, RoutePage.routeName);
+        Navigator.pushReplacementNamed(context, RoutePage.routeName);
       });
     });
   }

@@ -264,11 +264,8 @@ class _SearchPageState extends State<SearchPage> {
                               ),
                             ],
                           ),
-                          const SizedBox(
-                            height: 7,
-                          ),
                           SizedBox(
-                            height: 30,
+                            height: 40,
                             width: 80,
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.end,
@@ -291,7 +288,7 @@ class _SearchPageState extends State<SearchPage> {
                         ],
                       ),
                       const SizedBox(
-                        width: 5,
+                        width: 10,
                       ),
                     ],
                   );
@@ -377,7 +374,8 @@ class _SearchPageState extends State<SearchPage> {
                     itemCount: stars.length,
                     itemBuilder: (BuildContext context, int index) {
                       return Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 14, vertical: 6),
                         child: Container(
                           height: 110,
                           color: Colors.white,

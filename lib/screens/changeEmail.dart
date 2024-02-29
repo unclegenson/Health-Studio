@@ -7,6 +7,8 @@ import 'package:app23/screens/ChangeNumber.dart';
 import 'package:flutter/material.dart';
 
 import 'ProfilePage.dart';
+import 'RoutePage.dart';
+import 'info.dart';
 
 class ChangeEmail extends StatefulWidget {
   static String routeName = '/changeEmail';
@@ -201,17 +203,21 @@ class _BodyState extends State<Body> {
                   Timer(
                     const Duration(seconds: 3),
                     () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) =>
-                              ProfilePage(dropdownValue, number, email),
-                        ),
-                      );
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) {
+                          return RoutePage(
+                            pageIndex: 3,
+                            dropdownValue: info().dropdownValue,
+                            email: info().email,
+                            number: info().number,
+                          );
+                        },
+                      ));
                     },
                   );
                   setState(() {
                     nextvalue = email;
+                    info().email = email;
                   });
                 } else {
                   ScaffoldMessenger.of(context).showSnackBar(widget.snackBar2);

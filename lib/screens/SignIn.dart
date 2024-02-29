@@ -356,7 +356,7 @@ atleast :
                             color: Colors.indigo,
                           ),
                           Text(
-                            'Face Book',
+                            'FaceBook',
                             style: TextStyle(
                               fontWeight: FontWeight.w500,
                               fontSize: 18,

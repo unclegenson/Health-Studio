@@ -1,19 +1,48 @@
 // ignore_for_file: file_names
 
+import 'package:app23/screens/DoctorPage.dart';
 import 'package:app23/screens/SearchPage.dart';
 import 'package:app23/screens/changeEmail.dart';
 import 'package:flutter/material.dart';
-
+import 'info.dart';
 import 'ChangeNumber.dart';
 import 'Home.dart';
 import '../screens/ProfilePage.dart';
 import '../screens/SchedulePage.dart';
 
-void main() => runApp(const RoutePage());
+void main() => runApp(
+      RoutePage(
+        pageIndex: 0,
+        dropdownValue: info().dropdownValue,
+        email: info().email,
+        number: info().number,
+      ),
+    );
 
-class RoutePage extends StatelessWidget {
+class RoutePage extends StatefulWidget {
+  final int pageIndex;
+  final String dropdownValue;
+  final String number;
+  final String email;
+
   static String routeName = '/Routepage';
-  const RoutePage({super.key});
+  const RoutePage(
+      {super.key,
+      required this.pageIndex,
+      required this.dropdownValue,
+      required this.number,
+      required this.email});
+
+  @override
+  State<RoutePage> createState() => _RoutePageState();
+}
+
+class _RoutePageState extends State<RoutePage> {
+  @override
+  void initState() {
+    _selectedIndex = widget.pageIndex;
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,10 +61,10 @@ class BottomNavigationBarExample extends StatefulWidget {
       _BottomNavigationBarExampleState();
 }
 
+int _selectedIndex = 0;
+
 class _BottomNavigationBarExampleState
     extends State<BottomNavigationBarExample> {
-  int _selectedIndex = 0;
-
   static final List<Widget> _widgetOptions = <Widget>[
     const HomePartPage(),
     const SearchPage(),

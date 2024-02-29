@@ -17,6 +17,7 @@ class _FirstRoutePageState extends State<FirstRoutePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
@@ -124,20 +125,6 @@ class _FirstRoutePageState extends State<FirstRoutePage> {
                     ),
                   ),
                 ),
-              ),
-              const SizedBox(
-                height: 40,
-              ),
-              const Text(
-                '<UGS/> @UncleGenSon',
-                style: TextStyle(
-                  // fontFamily: 'google',
-                  fontSize: 15,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-              const SizedBox(
-                height: 10,
               ),
             ],
           ),

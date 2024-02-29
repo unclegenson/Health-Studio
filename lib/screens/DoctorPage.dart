@@ -277,9 +277,7 @@ consistantly working on improving her skills.''',
                         style: TextStyle(
                             fontSize: 16, fontWeight: FontWeight.w300),
                       ),
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width - 250,
-                      ),
+                      const Spacer(),
                       TextButton(
                         onPressed: () {},
                         child: const Text(
@@ -294,7 +292,7 @@ consistantly working on improving her skills.''',
                     ],
                   ),
                   SizedBox(
-                    width: MediaQuery.of(context).size.width - 20,
+                    width: MediaQuery.of(context).size.width - 28,
                     height: 145,
                     child: ListView.builder(
                       scrollDirection: Axis.horizontal,
@@ -302,142 +300,131 @@ consistantly working on improving her skills.''',
                       itemBuilder: (context, index) {
                         return Padding(
                           padding: const EdgeInsets.all(6.0),
-                          child: Stack(
-                            alignment: Alignment.bottomRight,
-                            children: [
-                              Container(
-                                width: 240,
-                                height: 200,
-                                decoration: BoxDecoration(
-                                  borderRadius:
-                                      BorderRadiusDirectional.circular(15),
-                                  color:
-                                      const Color.fromARGB(255, 243, 222, 229),
+                          child: Container(
+                            width: 240,
+                            height: 200,
+                            decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadiusDirectional.circular(10),
+                              color: const Color.fromARGB(255, 243, 222, 229),
+                            ),
+                            child: Column(
+                              children: [
+                                const SizedBox(
+                                  height: 4,
                                 ),
-                                child: Column(
+                                Row(
                                   children: [
                                     const SizedBox(
-                                      height: 4,
+                                      width: 12,
                                     ),
-                                    Row(
-                                      children: [
-                                        const SizedBox(
-                                          width: 12,
-                                        ),
-                                        CircleAvatar(
-                                          radius: 30,
-                                          backgroundImage:
-                                              AssetImage(images[index]),
-                                        ),
-                                        const SizedBox(
-                                          width: 10,
-                                        ),
-                                        SizedBox(
-                                          height: 70,
-                                          width: 150,
-                                          child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
+                                    CircleAvatar(
+                                      radius: 30,
+                                      backgroundImage:
+                                          AssetImage(images[index]),
+                                    ),
+                                    const SizedBox(
+                                      width: 10,
+                                    ),
+                                    SizedBox(
+                                      height: 70,
+                                      width: 150,
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceAround,
+                                        children: [
+                                          const SizedBox(
+                                            height: 5,
+                                          ),
+                                          Row(
                                             mainAxisAlignment:
-                                                MainAxisAlignment.spaceAround,
+                                                MainAxisAlignment.spaceBetween,
                                             children: [
-                                              const SizedBox(
-                                                height: 5,
-                                              ),
-                                              Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceBetween,
-                                                children: [
-                                                  Flexible(
-                                                    child: Text(
-                                                      names[index],
-                                                      overflow:
-                                                          TextOverflow.ellipsis,
-                                                      maxLines: 2,
-                                                      style: const TextStyle(
-                                                        color: Colors.black,
-                                                        fontSize: 15,
-                                                        fontWeight:
-                                                            FontWeight.w500,
-                                                      ),
-                                                    ),
+                                              Flexible(
+                                                child: Text(
+                                                  names[index],
+                                                  overflow:
+                                                      TextOverflow.ellipsis,
+                                                  maxLines: 1,
+                                                  style: const TextStyle(
+                                                    color: Colors.black,
+                                                    fontSize: 15,
+                                                    fontWeight: FontWeight.w500,
                                                   ),
-                                                ],
+                                                ),
                                               ),
+                                            ],
+                                          ),
+                                          Row(
+                                            children: [
                                               Text(
                                                 '${hours[index]} hours ago',
                                                 style: const TextStyle(
-                                                  fontSize: 14,
+                                                  fontSize: 12,
                                                   fontWeight: FontWeight.w300,
                                                 ),
                                               ),
                                               const SizedBox(
-                                                height: 15,
+                                                width: 4,
+                                              ),
+                                              Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment
+                                                        .spaceEvenly,
+                                                children: [
+                                                  const SizedBox(
+                                                    width: 2,
+                                                  ),
+                                                  const Icon(
+                                                    Icons.star,
+                                                    size: 17,
+                                                    color: Colors.amber,
+                                                  ),
+                                                  Text(
+                                                    stars[index].toString(),
+                                                    style: const TextStyle(
+                                                        fontSize: 15,
+                                                        fontWeight:
+                                                            FontWeight.w400),
+                                                  ),
+                                                  const SizedBox(
+                                                    width: 2,
+                                                  ),
+                                                ],
                                               ),
                                             ],
                                           ),
-                                        ),
-                                      ],
-                                    ),
-                                    Row(
-                                      children: const [
-                                        SizedBox(
-                                          width: 10,
-                                        ),
-                                        Flexible(
-                                          child: Text(
-                                            'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-                                            overflow: TextOverflow.ellipsis,
-                                            maxLines: 3,
-                                            style: TextStyle(
-                                              color: Colors.black,
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.w300,
-                                            ),
+                                          const SizedBox(
+                                            height: 15,
                                           ),
-                                        ),
-                                      ],
+                                        ],
+                                      ),
                                     ),
                                   ],
                                 ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(8),
-                                child: Container(
-                                  height: 25,
-                                  width: 50,
-                                  decoration: BoxDecoration(
-                                    borderRadius:
-                                        BorderRadiusDirectional.circular(10),
-                                    color: Colors.redAccent,
-                                  ),
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      const SizedBox(
-                                        width: 2,
+                                Row(
+                                  children: const [
+                                    SizedBox(
+                                      width: 14,
+                                    ),
+                                    Flexible(
+                                      child: Text(
+                                        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+                                        overflow: TextOverflow.ellipsis,
+                                        maxLines: 3,
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w300,
+                                        ),
                                       ),
-                                      const Icon(
-                                        Icons.star,
-                                        size: 17,
-                                        color: Colors.amber,
-                                      ),
-                                      Text(
-                                        stars[index].toString(),
-                                        style: const TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.w400),
-                                      ),
-                                      const SizedBox(
-                                        width: 2,
-                                      ),
-                                    ],
-                                  ),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         );
                       },
@@ -658,7 +645,7 @@ consistantly working on improving her skills.''',
                   ),
                   const SizedBox(height: 10),
                   SizedBox(
-                    height: 150,
+                    height: 170,
                     width: 360,
                     child: GridView.builder(
                       gridDelegate:
@@ -762,7 +749,7 @@ consistantly working on improving her skills.''',
                   ),
                 ),
                 onPressed: () {
-                  Navigator.push(
+                  Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
                       builder: (context) => const Appointment(),

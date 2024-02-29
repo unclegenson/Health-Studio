@@ -5,7 +5,9 @@ import 'dart:async';
 import 'package:app23/screens/ChangeNumber.dart';
 import 'package:app23/screens/ProfilePage.dart';
 import 'package:flutter/material.dart';
+import 'RoutePage.dart';
 import 'changeEmail.dart';
+import 'info.dart';
 
 class ChangeLanguage extends StatefulWidget {
   static String routeName = '/changeLanguage';
@@ -135,6 +137,7 @@ class _BodyState extends State<Body> {
               onChanged: (String? value) {
                 setState(() {
                   dropdownValue = value!;
+                  info().dropdownValue = dropdownValue;
                 });
               },
               items: list_.map<DropdownMenuItem<String>>((String value) {
@@ -173,16 +176,24 @@ class _BodyState extends State<Body> {
               onPressed: () {
                 if (dropdownValue != firstValue) {
                   ScaffoldMessenger.of(context).showSnackBar(widget.snackBar);
-                  Timer(const Duration(seconds: 3), () {
-                    Navigator.push(
+                  Timer(
+                    const Duration(seconds: 3),
+                    () {
+                      Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) =>
-                              ProfilePage(dropdownValue, number, email),
-                        ));
-                  });
+                          builder: (context) => RoutePage(
+                            pageIndex: 3,
+                            dropdownValue: info().dropdownValue,
+                            email: info().email,
+                            number: info().number,
+                          ),
+                        ),
+                      );
+                    },
+                  );
                   setState(() {
-                    dropdownValue = firstValue;
+                    info().dropdownValue = dropdownValue;
                   });
                 } else {
                   ScaffoldMessenger.of(context).showSnackBar(widget.snackBar2);

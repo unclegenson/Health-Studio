@@ -3,6 +3,8 @@
 import 'package:app23/screens/RoutePage.dart';
 import 'package:flutter/material.dart';
 
+import 'info.dart';
+
 class Appointment extends StatefulWidget {
   static String routeName = '/appointment';
   const Appointment({super.key});
@@ -31,7 +33,12 @@ class _AppointmentState extends State<Appointment> {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const RoutePage(),
+                    builder: (context) => RoutePage(
+                      pageIndex: 1,
+                      dropdownValue: info().dropdownValue,
+                      email: info().email,
+                      number: info().number,
+                    ),
                   ));
             },
             child: const Text(

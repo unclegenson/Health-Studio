@@ -12,11 +12,17 @@ import '../screens/Done.dart';
 import '../screens/SearchPage.dart';
 import '../screens/ChangeNumber.dart';
 import '../screens/CreateAccount.dart';
+import '../screens/info.dart';
 
 final Map<String, WidgetBuilder> routes = {
   FirstRoutePage.routeName: (context) => const FirstRoutePage(),
   SignInPage.routeName: (context) => const SignInPage(),
-  RoutePage.routeName: (context) => const RoutePage(),
+  RoutePage.routeName: (context) => RoutePage(
+        pageIndex: 0,
+        dropdownValue: info().dropdownValue,
+        email: info().email,
+        number: info().number,
+      ),
   HomePartPage.routeName: (context) => const HomePartPage(),
   SchedulePage.routeName: (context) => const SchedulePage(),
   ProfilePage.routeName: (context) =>
